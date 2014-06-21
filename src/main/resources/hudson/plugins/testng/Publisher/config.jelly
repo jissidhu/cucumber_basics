@@ -1,0 +1,20 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
+         xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:bh="/lib/health">
+   <f:entry title="TestNG XML report pattern" field="reportFilenamePattern">
+      <f:textbox name="testng.reportFilenamePattern" value="${instance.reportFilenamePattern}" default="**/testng-result.xml"/>
+   </f:entry>
+   <f:advanced>
+      <f:entry title="Escape Test description string?" field="escapeTestDescp">
+         <f:checkbox name="testng.escapeTestDescp" default="true" />
+	  </f:entry>
+	  <f:entry title="Escape exception messages?" field="escapeExceptionMsg">
+         <f:checkbox name="testng.escapeExceptionMsg" default="true" />
+      </f:entry>
+      <f:entry title="Show failed builds in trend graph?" field="showFailedBuilds">
+         <f:checkbox name="testng.showFailedBuilds" default="false" />
+      </f:entry>
+      <f:entry title="Mark build unstable on skipped tests?" field="unstableOnSkippedTests">
+         <f:checkbox name="testng.unstableOnSkippedTests" default="false" />
+      </f:entry>
+   </f:advanced>
+</j:jelly>
